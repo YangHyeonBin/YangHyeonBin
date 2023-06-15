@@ -15,9 +15,9 @@
 - 📫 How to reach me: idgusqls0506@gmail.com
 
 
-<img src="https://github-readme-stats.vercel.app/api?username=YangHyeonBin&show_icons=true"/>
+<!-- <img src="https://github-readme-stats.vercel.app/api?username=YangHyeonBin&show_icons=true&count_private=true"/> -->
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs?username=YangHyeonBin&layout=compact"/>
+<!-- <img src="https://github-readme-stats.vercel.app/api/top-langs?username=YangHyeonBin&layout=compact"/> -->
 
 
 <!---
