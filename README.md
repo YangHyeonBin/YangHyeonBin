@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @YangHyeonBin
 
-- 🌱 I'm a junior programmer.
+- I'm a junior programmer. 🐥
   
   I started studying Python on 2021-08-30(August 30th, 2021).
   
