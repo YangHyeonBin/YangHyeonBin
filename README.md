@@ -2,7 +2,7 @@
 
 - I'm a junior programmer. 🐥
   
-  I started studying Python on 2021-08-30(August 30th, 2021).
+  I started studying Python on 2021-08-30.
   
   And I started learning HTML on 2021-09-22, CSS on 2022-02-03, JavaScript on 2022-03-28, React on 2022-06-19.
   
