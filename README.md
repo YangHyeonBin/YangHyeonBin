@@ -14,6 +14,10 @@
 
   You can check out the project here if you are interested: https://tickitacka.com/
 
+- ⚡️ In January 2025, my team relaunched our product under the new name "[Orblit](https://orblit.space/)". We decided to migrate the tech stack from Flutter to React and from Firebase (NoSQL) to Supabase (PostgreSQL-based). We made these changes to achieve better web performance and to leverage the strengths of a relational database, which was a better fit for our evolving data structure.
+
+  After returning to React—which was the framework I first used to study web development—I have found even greater excitement and interest in building faster and more robust applications with our new tech stack.
+
 - 📫 How to reach me: idgusqls0506@gmail.com
 
 
