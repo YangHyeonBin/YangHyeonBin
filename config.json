@@ -1,0 +1,18 @@
+{
+  "animal": "fox",
+  "github_username": "YangHyeonBin",
+  "spotify_track_id": "원하는 곡 track id",
+  "timezone": "Asia/Seoul",
+  "language": "ko",
+  "features": {
+    "github_stats": true,
+    "spotify": false,
+    "time_greeting": true,
+    "commit_mood": true
+  },
+  "commit_thresholds": {
+    "sleeping": 10,
+    "relaxed": 30,
+    "active": 60
+  }
+}
