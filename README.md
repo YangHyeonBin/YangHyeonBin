@@ -3,6 +3,7 @@
 I'm a passionate junior programmer who enjoys building meaningful products with like-minded people.
 I strive to create work I truly enjoy, and I’m motivated by the desire to make a positive impact in the world.
 
+
 ### 🌱 Current Role
 Frontend engineer at a startup (since Jan 2023)
 
@@ -20,6 +21,10 @@ Returning to React—a framework I first encountered while learning web developm
 I’m passionate about collaborative development that drives meaningful impact. I love how software can solve real-world problems and enhance daily life!
 
 **📫 How to reach me**: idgusqls0506@gmail.com
+
+### Some other activities...
+
+[![개취뽀 스터디](https://gaechwippo.vercel.app/api/badge?title=FE%20%EB%AA%A8%EC%9D%98%20%EA%B3%BC%EC%A0%9C%20%EC%8A%A4%ED%84%B0%EB%94%94&duration=2025.11-2025.12&leader=false)](https://gaechwippo.vercel.app/studies/fe-mock-assignment-study-2025)
 
 
 <!-- <img src="https://github-readme-stats.vercel.app/api?username=YangHyeonBin&show_icons=true&count_private=true"/> -->
