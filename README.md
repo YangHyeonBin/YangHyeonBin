@@ -3,6 +3,12 @@
 I'm a passionate junior programmer who enjoys building meaningful products with like-minded people.
 I strive to create work I truly enjoy, and I’m motivated by the desire to make a positive impact in the world.
 
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,react,dart,flutter" />
+    <img src="https://skillicons.dev/icons?i=firebase,supabase,git,docker,sentry,figma" />
+  </a>
+</p>
 
 ### 🌱 Current Role
 Frontend engineer at a startup (since Jan 2023)
