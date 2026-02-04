@@ -198,6 +198,25 @@ ${moodLabel}
   const startIdx = existingContent.indexOf(START_MARKER);
   const endIdx = existingContent.indexOf(END_MARKER);
 
+  // 타임스탬프 라인을 제거하고 핵심 콘텐츠만 비교하는 함수
+  const stripTimestamp = (content) =>
+    content.replace(/<!-- Last updated: .* -->\n?/g, '');
+
+  // 기존 ZOOROFILE 섹션 추출
+  let existingZoorofile = '';
+  if (startIdx !== -1 && endIdx !== -1) {
+    existingZoorofile = existingContent.slice(startIdx, endIdx + END_MARKER.length);
+  }
+
+  // 핵심 콘텐츠 비교 (타임스탬프 제외)
+  const existingCore = stripTimestamp(existingZoorofile);
+  const newCore = stripTimestamp(readme);
+
+  if (existingCore === newCore) {
+    console.log('ℹ️  핵심 콘텐츠 변경 없음 - README 업데이트 스킵');
+    return;
+  }
+
   let finalContent;
 
   if (startIdx !== -1 && endIdx !== -1) {
