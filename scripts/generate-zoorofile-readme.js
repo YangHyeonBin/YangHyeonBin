@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { getTimeGreeting, getMood, getMoodLabel, generateProgressBar, config } = require('./utils');
 const { getLanguageStats, getUserStats } = require('./get-github-stats');
-const { getWeeklyContributions } = require('./get-commit-activity');
+const { getWeeklyContributions, getWeeklyContributionsByRepo, getRecentCommits } = require('./get-commit-activity');
 const { getSpotifyStatus } = require('./get-spotify-status');
 const { checkVersion } = require('./check-version');
 
@@ -56,6 +56,63 @@ function generateLanguageSection(langs) {
   return section + '\n';
 }
 
+// ─── 주간 기여 섹션 생성 ─────────────────────────────────────────────
+
+function generateWeeklyContributionsSection(contributionsByRepo, recentCommits) {
+  if (!contributionsByRepo) return '';
+
+  const lang = config.language || 'ko';
+  const { publicRepos, summary } = contributionsByRepo;
+
+  const title = lang === 'ko' ? '📅 이번 주 기여' : '📅 This Week\'s Contributions';
+  const summaryTitle = lang === 'ko' ? '요약' : 'Summary';
+  const publicLabel = lang === 'ko' ? 'Public 레포' : 'Public repos';
+  const privateLabel = lang === 'ko' ? 'Private 레포' : 'Private repos';
+  const repoLabel = lang === 'ko' ? '개' : '';
+
+  let section = `### ${title}\n\n`;
+
+  // 요약 테이블
+  section += `**${summaryTitle}**\n\n`;
+  section += `| | ${lang === 'ko' ? '레포 수' : 'Repos'} | ${lang === 'ko' ? '기여 수' : 'Contributions'} |\n`;
+  section += `|:---|:---:|:---:|\n`;
+  section += `| 🔓 ${publicLabel} | ${summary.publicRepoCount}${repoLabel} | ${summary.publicCommits} |\n`;
+  section += `| 🔒 ${privateLabel} | ${summary.privateRepoCount}${repoLabel} | ${summary.privateCommits} |\n\n`;
+
+  // Public 레포 상세
+  if (publicRepos.length > 0) {
+    const detailTitle = lang === 'ko' ? '🔓 Public 기여 상세' : '🔓 Public Contributions';
+    section += `**${detailTitle}**\n\n`;
+
+    for (const repo of publicRepos.slice(0, 5)) { // 상위 5개만
+      const parts = [];
+      if (repo.commits > 0) parts.push(`${repo.commits} commits`);
+      if (repo.prs > 0) parts.push(`${repo.prs} PRs`);
+      if (repo.issues > 0) parts.push(`${repo.issues} issues`);
+
+      section += `- [${repo.name}](${repo.url}) — ${parts.join(', ')}\n`;
+    }
+    section += '\n';
+  }
+
+  // 최근 커밋 메시지
+  if (recentCommits && recentCommits.length > 0) {
+    const commitsTitle = lang === 'ko' ? '💬 최근 커밋' : '💬 Recent Commits';
+    section += `**${commitsTitle}**\n\n`;
+
+    for (const commit of recentCommits.slice(0, 5)) { // 상위 5개만
+      const shortRepo = commit.repo.split('/')[1] || commit.repo;
+      const shortMessage = commit.message.length > 50
+        ? commit.message.substring(0, 47) + '...'
+        : commit.message;
+      section += `- \`${shortRepo}\` [${shortMessage}](${commit.url})\n`;
+    }
+    section += '\n';
+  }
+
+  return section;
+}
+
 // ─── 통계 섹션 생성 ──────────────────────────────────────────────────
 
 function generateStatsSection(stats) {
@@ -87,6 +144,8 @@ async function main() {
   console.log('📡 데이터 가져오기...');
 
   let weeklyContributions = 0;
+  let weeklyContributionsByRepo = null;
+  let recentCommits = null;
   let languageStats = [];
   let userStats = null;
   let spotify = null;
@@ -96,6 +155,21 @@ async function main() {
     console.log(`  ✅ 주간 컨트리뷰션: ${weeklyContributions}`);
   } catch (e) {
     console.warn('  ⚠️  컨트리뷰션 조회 실패:', e.message);
+  }
+
+  try {
+    weeklyContributionsByRepo = await getWeeklyContributionsByRepo();
+    const { summary } = weeklyContributionsByRepo;
+    console.log(`  ✅ 레포별 기여: Public ${summary.publicRepoCount}개(${summary.publicCommits}), Private ${summary.privateRepoCount}개(${summary.privateCommits})`);
+  } catch (e) {
+    console.warn('  ⚠️  레포별 기여 조회 실패:', e.message);
+  }
+
+  try {
+    recentCommits = await getRecentCommits(5);
+    console.log(`  ✅ 최근 커밋: ${recentCommits.length}개`);
+  } catch (e) {
+    console.warn('  ⚠️  최근 커밋 조회 실패:', e.message);
   }
 
   try {
@@ -165,6 +239,13 @@ ${moodLabel}
   if (config.features?.github_stats) {
     if (userStats) readme += generateStatsSection(userStats);
     if (languageStats.length) readme += generateLanguageSection(languageStats);
+  }
+
+  // 주간 기여 (weekly_contributions feature 또는 기본 활성화)
+  if (config.features?.weekly_contributions !== false) {
+    if (weeklyContributionsByRepo) {
+      readme += generateWeeklyContributionsSection(weeklyContributionsByRepo, recentCommits);
+    }
   }
 
   // Spotify
