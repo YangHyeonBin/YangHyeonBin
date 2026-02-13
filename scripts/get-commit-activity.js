@@ -188,9 +188,19 @@ async function getWeeklyContributionsByRepo() {
 
   const summary = {
     publicRepoCount: publicRepos.length,
-    publicCommits: publicRepos.reduce((sum, r) => sum + r.total, 0),
     privateRepoCount: privateRepos.length,
-    privateCommits: privateRepos.reduce((sum, r) => sum + r.total, 0),
+    public: {
+      commits: publicRepos.reduce((sum, r) => sum + r.commits, 0),
+      prs: publicRepos.reduce((sum, r) => sum + r.prs, 0),
+      issues: publicRepos.reduce((sum, r) => sum + r.issues, 0),
+      total: publicRepos.reduce((sum, r) => sum + r.total, 0),
+    },
+    private: {
+      commits: privateRepos.reduce((sum, r) => sum + r.commits, 0),
+      prs: privateRepos.reduce((sum, r) => sum + r.prs, 0),
+      issues: privateRepos.reduce((sum, r) => sum + r.issues, 0),
+      total: privateRepos.reduce((sum, r) => sum + r.total, 0),
+    },
   };
 
   return { publicRepos, privateRepos, summary };
