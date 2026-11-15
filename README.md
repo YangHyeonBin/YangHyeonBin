@@ -15,7 +15,7 @@ TypeScript · React · React Native(Expo) · NestJS · Supabase(PostgreSQL) · p
 
 - **모바일 앱 단독 개발·출시**: Expo + EAS Update로 앱스토어·플레이스토어 출시, 웹과 백엔드·공통 로직을 모노레포로 공유
 - **데이터로 문제 찾고 고치기**: 지표를 직접 분석해 미팅 종료 흐름을 반복 미팅 유도 넛지로 바꾸고, 배포 후 측정 결과로 한 번 더 개선
-- **미팅 준비(프렙) 개편**: 업무 보고처럼 동작하던 챗봇 대화 흐름을 사용자가 원하는 대화 안건을 뽑아내는 방향으로 개편. 문제 정의, AI 요구사항 정리, 웹·모바일 UXUI 개편 및 연동. 리더용 미팅 가이드를 '고정된 3가지 키워드 + 요약 + 추천 질문'에서 '미팅 진행 단계별 가이드 + 단계별 추천 질문'으로 재구성.
+- **제품 UX·UI 설계**: 웹·모바일 화면과 사용 흐름을 직접 설계하고, 미팅 준비(프렙) 같은 AI 기능의 사용자 경험 개편을 주도 (AI 엔지니어 협업)
 
 ### 🧭 일하는 방식
 
@@ -26,10 +26,6 @@ TypeScript · React · React Native(Expo) · NestJS · Supabase(PostgreSQL) · p
 ### 🐾 사이드 프로젝트
 
 - [**Zoorofile**](https://github.com/YangHyeonBin/zoorofile): 커밋 활동에 따라 상태가 바뀌는 동물 캐릭터로 GitHub 프로필 README를 꾸미는 오픈소스 (GitHub Actions 자동 업데이트, 한/영 지원)
-
-### 📫 연락
-
-idgusqls0506@gmail.com
 
 
 <!-- <img src="https://github-readme-stats.vercel.app/api?username=YangHyeonBin&show_icons=true&count_private=true"/> -->
