@@ -1,39 +1,36 @@
-## 👋 Hi, I’m @YangHyeonBin
+## 안녕하세요, 양현빈입니다 🥰
 
-I'm a passionate junior programmer who enjoys building meaningful products with like-minded people.
-I strive to create work I truly enjoy, and I’m motivated by the desire to make a positive impact in the world.
+**유용한 서비스를 매끄러운 사용자 경험으로 전달하는 프론트엔드 중심 풀스택 개발자**입니다.
+B2B SaaS 스타트업에서 4년간 웹·앱 제품을 기획부터 배포, 운영까지 맡아 왔습니다.
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,react,dart,flutter" />
-    <img src="https://skillicons.dev/icons?i=firebase,supabase,git,docker,sentry,figma" />
-  </a>
+<p>
+  <img src="https://skillicons.dev/icons?i=ts,react,nestjs,supabase,postgres,git" />
 </p>
 
-### 🌱 Current Role
+TypeScript · React · React Native(Expo) · NestJS · Supabase(PostgreSQL) · pnpm/Turborepo 모노레포
 
-Frontend engineer at a startup (since Jan 2023)
+### 🛠 요즘 하고 있는 일
 
-Enjoy working closely with my team, openly discussing ideas and searching for better solutions together.
+리더와 구성원의 1on1을 돕는 B2B SaaS [Orblit](https://orblit.space)을 0에서부터 만들고 운영하고 있습니다.
 
-### 🚀 Recent Work
+- **모바일 앱 단독 개발·출시**: Expo + EAS Update로 앱스토어·플레이스토어 출시, 웹과 백엔드·공통 로직을 모노레포로 공유
+- **데이터로 문제 찾고 고치기**: 지표를 직접 분석해 미팅 종료 흐름을 반복 미팅 유도 넛지로 바꾸고, 배포 후 측정 결과로 한 번 더 개선
+- **미팅 준비(프렙) 개편**: 업무 보고처럼 동작하던 챗봇 대화 흐름을 사용자가 원하는 대화 안건을 뽑아내는 방향으로 개편. 문제 정의, AI 요구사항 정리, 웹·모바일 UXUI 개편 및 연동. 리더용 미팅 가이드를 '고정된 3가지 키워드 + 요약 + 추천 질문'에서 '미팅 진행 단계별 가이드 + 단계별 추천 질문'으로 재구성.
 
-Contributed to the relaunch of our SaaS product, now named “[Orblit](https://orblit.space)” (started since Jan 2025)
+### 🧭 일하는 방식
 
-Migrated our tech stack from Flutter to React, and from Firebase (NoSQL) to Supabase (PostgreSQL-based)
-→ This change allowed us to dramatically improve web performance by adopting a relational data structure that suits our growing product needs
+- 개발한 기능의 **까다로운 첫 사용자**가 되어 사용성을 검토하고 고칩니다.
+- 문제를 고칠 때 증상보다 **원인과 구조**를 보고, 같은 문제가 반복되지 않도록 기준을 남깁니다.
+- 판단의 **근거와 트레이드오프**를 기록해 팀과 공유합니다.
 
-Returning to React—a framework I first encountered while learning web development—has reignited my excitement for creating robust, modern web applications
+### 🐾 사이드 프로젝트
 
-### 👀 What Drives Me
+- [**Zoorofile**](https://github.com/YangHyeonBin/zoorofile): 커밋 활동에 따라 상태가 바뀌는 동물 캐릭터로 GitHub 프로필 README를 꾸미는 오픈소스 (GitHub Actions 자동 업데이트, 한/영 지원)
 
-I’m passionate about collaborative development that drives meaningful impact. I love how software can solve real-world problems and enhance daily life!
+### 📫 연락
 
-**📫 How to reach me**: idgusqls0506@gmail.com
+idgusqls0506@gmail.com
 
-### Some other activities...
-
-[![개취뽀 스터디](https://gaechwippo.vercel.app/api/badge?title=FE%20%EB%AA%A8%EC%9D%98%20%EA%B3%BC%EC%A0%9C%20%EC%8A%A4%ED%84%B0%EB%94%94&duration=2025.11-2025.12&leader=false)](https://gaechwippo.vercel.app/studies/fe-mock-assignment-study-2025)
 
 <!-- <img src="https://github-readme-stats.vercel.app/api?username=YangHyeonBin&show_icons=true&count_private=true"/> -->
 
@@ -77,282 +74,3 @@ You can click the Preview link to take a look at your changes.
 
 </div>
 <!-- ZOOROFILE_END -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
